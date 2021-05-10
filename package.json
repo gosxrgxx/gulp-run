@@ -13,6 +13,7 @@
     "gulp-autoprefixer": "^7.0.1",
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
+    "editorconfig-checker": "^4.0.2",
     "gulp-file-include": "^2.2.2",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-imagemin": "^7.1.0",
