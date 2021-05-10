@@ -4,7 +4,9 @@
   "description": "Quick start gulp",
   "author": "gosxrgxx.com",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "editorconfig": "editorconfig-checker"
+  },
   "type": "module",
   "devDependencies": {
     "browser-sync": "^2.26.7",
