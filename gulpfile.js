@@ -4,6 +4,7 @@ import gulp from 'gulp';
 import browsersync from 'browser-sync';
 import del from 'del';
 import autoprefixer from 'gulp-autoprefixer';
+import beautify from 'gulp-beautify-code';
 import cleanCSS from 'gulp-clean-css';
 import fileinclude from 'gulp-file-include';
 import media from 'gulp-group-css-media-queries';
@@ -19,7 +20,6 @@ import cleanJS from 'gulp-uglify-es';
 import webp from 'gulp-webp';
 import webphtml from 'gulp-webp-html';
 import webpcss from 'gulp-webpcss';
-import prettify from 'gulp-html-prettify';
 
 // Path
 
@@ -64,7 +64,11 @@ export const html = () => {
 	return gulp.src(path.src.html)
 		.pipe(fileinclude())
 		.pipe(webphtml())
-		.pipe(prettify({indent_char: '	', indent_size: 1}))
+		.pipe(beautify({
+			indent_size: 1,
+			indent_char: '	',
+			end_with_newline: true
+		}))
 		.pipe(gulp.dest(path.build.html))
 		.pipe(browsersync.stream());
 };
@@ -89,6 +93,11 @@ export const css = () => {
 			webpClass: ".webp",
 			noWebpClass: ".no-webp"
 		}))
+		.pipe(beautify({
+			indent_size: 1,
+			indent_char: '	',
+			end_with_newline: true
+		}))
 		.pipe(gulp.dest(path.build.css))
 		.pipe(cleanCSS())
 		.pipe(
@@ -105,6 +114,11 @@ export const css = () => {
 export const js = () => {
 	return gulp.src(path.src.js)
 		.pipe(fileinclude())
+		.pipe(beautify({
+			indent_size: 1,
+			indent_char: '	',
+			end_with_newline: true
+		}))
 		.pipe(gulp.dest(path.build.js))
 		.pipe(cleanJS.default())
 		.pipe(
