@@ -5,7 +5,7 @@
   "author": "gosxrgxx.com",
   "license": "MIT",
   "scripts": {
-    "editorconfig": "editorconfig-checker --exclude '.git|node_modules|.DS_Store'"
+    "editorconfig": "editorconfig-checker --exclude '.git|node_modules|src/js/include/libs|.DS_Store'"
   },
   "type": "module",
   "devDependencies": {
