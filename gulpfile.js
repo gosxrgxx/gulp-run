@@ -240,10 +240,11 @@ export const deploy = () => {
 	return gulp.src('build/**')
 		.pipe(rsync({
 		root: 'build/',
-		hostname: 'your-host.io', // (*)
-		destination: 'public_html/your-dir/', // (*)
+		hostname: 'your-host.io',
+		destination: 'public_html/your-dir/',
 		incremental: true,
-		exclude: ['**/Thumbs.db', '**/*.DS_Store'], // (*)
+		exclude: ['**/Thumbs.db', '**/*.DS_Store', '*.css', '*.js'],
+		include: ['*.min.css', '*.min.js'],
 		recursive: true,
 		clean: true,
 		}));
