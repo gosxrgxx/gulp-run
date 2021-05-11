@@ -35,7 +35,7 @@ const path = {
 		js:  source_folder + "/js/main.js",
 		img: [
 			source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
-			"!" + source_folder + "/img/icons/#svgforgulp/*.svg",
+			"!" + source_folder + "/img/icons/_svgsprite/*.svg",
 			"!" + source_folder + "/img/favicon/**/*"
 		],
 		favicon: source_folder + "/img/favicon/**/*",
@@ -201,12 +201,12 @@ export const clean = () => {
 
 // SVG sprite (manual start)
 
-export const spriteSVG = () => {
-	return gulp.src([source_folder + '/img/icons/#svgforgulp/*.svg'])
+export const svgsprite = () => {
+	return gulp.src([source_folder + '/img/icons/_svgsprite/*.svg'])
 		.pipe(svgSprite({
 			mode: {
 				symbol: {
-					sprite: "../icons/spritesheet.svg"
+					sprite: "../_svgsprite.html"
 				}
 			},
 		}))
@@ -231,7 +231,7 @@ export const spriteSVG = () => {
 				pretty: true
 			}
 		}))
-		.pipe(gulp.dest([source_folder + '/img/']));
+		.pipe(gulp.dest([source_folder + '/']));
 };
 
 // Deploy
