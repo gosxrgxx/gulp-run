@@ -1,1 +1,1 @@
-@@include('includes/lib/testWebP.js')
+@@include('include/libs/testWebP.js')
