@@ -245,6 +245,11 @@ export const svgsprite = () => {
 				pretty: true
 			}
 		}))
+		.pipe(beautify({
+			indent_size: 1,
+			indent_char: '	',
+			end_with_newline: true
+		}))
 		.pipe(gulp.dest([source_folder + '/']));
 };
 
