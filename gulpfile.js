@@ -19,6 +19,7 @@ import cleanJS from 'gulp-uglify-es';
 import webp from 'gulp-webp';
 import webphtml from 'gulp-webp-html';
 import webpcss from 'gulp-webpcss';
+import prettify from 'gulp-html-prettify';
 
 // Path
 
@@ -63,6 +64,7 @@ export const html = () => {
 	return gulp.src(path.src.html)
 		.pipe(fileinclude())
 		.pipe(webphtml())
+		.pipe(prettify({indent_char: '	', indent_size: 1}))
 		.pipe(gulp.dest(path.build.html))
 		.pipe(browsersync.stream());
 };
