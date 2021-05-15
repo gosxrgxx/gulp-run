@@ -189,7 +189,7 @@ export const fonts = () => {
 // Browser sync
 
 export const browserSync = () => {
-	browsersync.create().init({
+	browsersync.init({
 		server: {
 			baseDir: "./" + project_folder + "/"
 		},
