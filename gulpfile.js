@@ -262,7 +262,7 @@ export const deploy = () => {
 		hostname: 'your-host.io',
 		destination: 'public_html/your-dir/',
 		incremental: true,
-		exclude: ['**/Thumbs.db', '**/*.DS_Store', '*.css', '*.js'],
+		exclude: ['**/Thumbs.db', '**/*.DS_Store', '*.css', '*.js', '.htaccess'],
 		include: ['*.min.css', '*.min.js'],
 		recursive: true,
 		clean: true,
