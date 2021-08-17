@@ -15,4 +15,5 @@
 
 ## Возможные ошибки
 **Ошибка**: *Cannot find module 'webp-converter / cwebp'*
+
 **Решение**: `npm i webp-converter@2.2.3 --save-dev`
