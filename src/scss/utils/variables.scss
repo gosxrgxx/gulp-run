@@ -1,16 +1,17 @@
-// var for null.scss
-
-$fontfamily: "Font", sans-serif;
-$minwidth: 320px;
-
-// var for global.scss
-
-$container: 1100px;
-
 // breakpoints
+$desktop: 1400;
+$laptop: 1200;
+$tablet: 992;
+$mobileL: 768;
+$mobileS: 576;
 
-$desktop: 1600px;
-$laptop: 1199px;
-$tablet: 991px;
-$mobileL: 767px;
-$mobile: 575px;
+// null.scss
+$fontfamily: "Font", sans-serif;
+$minwidth: 320;
+
+// global.scss
+$container: 1100;
+
+// colors
+$dark: #000000;
+$light: #ffffff;
